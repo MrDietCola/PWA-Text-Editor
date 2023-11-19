@@ -1,5 +1,7 @@
 # PWA-Text-Editor
 
+https://github.com/MrDietCola/PWA-Text-Editor
+
 ## Description
 
 This is a pwa text editor application that alls the user to download the application and save his notes offline as well as online. 
