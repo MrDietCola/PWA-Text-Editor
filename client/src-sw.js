@@ -24,15 +24,9 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-// // Use offlineFallback for handling offline scenarios
-// offlineFallback({
-//   // Specify the fallback URL
-//   fallbackURL: '/offline.html',
-// });
-
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-// TODO: Implement asset caching
+// Asset caching
 registerRoute( 
   // Here we define the callback function that will filter the requests we want to cache (in this case, JS and CSS files)
 ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
