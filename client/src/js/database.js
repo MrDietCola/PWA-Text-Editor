@@ -23,7 +23,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore('jate');
 
   // Use the .add() method on the store and pass in the content.
-  const request = store.put({ text: content });
+  const request = store.put({ id: 1, text: content });
 
   // Get confirmation of the request.
   const result = await request;
@@ -42,16 +42,11 @@ export const getDb = async () => {
   const store = tx.objectStore('jate');
 
   // Use the .getAll() method to get all data in the database.
-  const request = store.getAll();
+  const request = store.get(1);
 
   // If the db has content, return the text of the last item in array, if db is empty, return undefinded variable 
   const result = await request;
-  const lastSave = result[result.length - 1]
-  if (lastSave) {
-    return lastSave.text;
-  } else {
-    return lastSave;
-  }
+  return result?.text;
 }
 
 // Start database
