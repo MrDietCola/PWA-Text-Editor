@@ -1,6 +1,6 @@
 # PWA-Text-Editor
 
-https://github.com/MrDietCola/PWA-Text-Editor
+https://github.com/Seidler93/PWA-Text-Editor
 
 https://limitless-inlet-49962-fdf6a772dad4.herokuapp.com/
 
